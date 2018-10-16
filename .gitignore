@@ -1,3 +1,61 @@
 ContreeClient/node_modules
 ContreeClient/android/build
 
+# From react-native init
+# OSX
+#
+ContreeClient/.DS_Store
+
+# Xcode
+#
+ContreeClient/build/
+ContreeClient/*.pbxuser
+ContreeClient/!default.pbxuser
+ContreeClient/*.mode1v3
+ContreeClient/!default.mode1v3
+ContreeClient/*.mode2v3
+ContreeClient/!default.mode2v3
+ContreeClient/*.perspectivev3
+ContreeClient/!default.perspectivev3
+ContreeClient/xcuserdata
+ContreeClient/*.xccheckout
+ContreeClient/*.moved-aside
+ContreeClient/DerivedData
+ContreeClient/*.hmap
+ContreeClient/*.ipa
+ContreeClient/*.xcuserstate
+ContreeClient/project.xcworkspace
+
+# Android/IntelliJ
+#
+ContreeClient/build/
+ContreeClient/.idea
+ContreeClient/.gradle
+ContreeClient/local.properties
+ContreeClient/*.iml
+
+# node.js
+#
+ContreeClient/node_modules/
+ContreeClient/npm-debug.log
+ContreeClient/yarn-error.log
+
+# BUCK
+ContreeClient/buck-out/
+ContreeClient/\.buckd/
+ContreeClient/*.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+ContreeClient/*/fastlane/report.xml
+ContreeClient/*/fastlane/Preview.html
+ContreeClient/*/fastlane/screenshots
+
+# Bundle artifact
+ContreeClient/*.jsbundle
+
