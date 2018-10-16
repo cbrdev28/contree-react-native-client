@@ -8,23 +8,40 @@
 
 import React from "react";
 import { Component } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
-const instructions = Platform.select({
-	ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
-	android:
-		"Double tap R on your keyboard to reload,\n" +
-		"Shake or press menu button for dev menu",
-});
+interface Props { }
+interface AppState {
+	connected: boolean;
+}
 
-interface Props {}
-export default class App extends Component<Props> {
+export default class App extends Component<Props, AppState> {
+	state = { connected: false };
+
+	didTapConnect = () => {
+		this.setState({ connected: true });
+	}
+
+	didTapDisconnect = () => {
+		this.setState({ connected: false });
+	}
+
 	render() {
+		const { connected } = this.state;
 		return (
 			<View style={styles.container}>
 				<Text style={styles.welcome}>Welcome to React Native! CBR</Text>
-				<Text style={styles.instructions}>To get started, edit App.tsx</Text>
-				<Text style={styles.instructions}>{instructions}</Text>
+				<Text style={styles.instructions}>To get started, tap the button below</Text>
+				{connected
+					? <TouchableOpacity onPress={this.didTapDisconnect}>
+						<Text style={styles.welcome}>Disconnect!</Text>
+					</TouchableOpacity>
+					: <TouchableOpacity onPress={this.didTapConnect}>
+						<Text style={styles.welcome}>Connect!</Text>
+					</TouchableOpacity>
+				}
+
+
 			</View>
 		);
 	}
