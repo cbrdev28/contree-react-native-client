@@ -1,0 +1,12 @@
+export const mainBackroundColor = "#F5FCFF";
+export const panelBackgroundColor = "#DCE2E5";
+export const regularMargin = 4;
+export const panelBorderRadius = 2;
+export const mainTextColor = "#323232";
+export const secondaryTextColor = "#707070";
+export const cardTextColor = "#E5E5E5";
+export const borderColor = "#B2B2B2";
+export const buttonColor = "#626466";
+export const buttonColorText = "white";
+export const handBackroundColor = "#7a7e7f";
+export const tableColor = "#313233";
