@@ -10,7 +10,7 @@ import {
 	borderColor,
 	panelBorderRadius,
 	mainBackroundColor,
-} from "./components/commonStyles";
+} from "./styles/commonStyles";
 
 import { Status } from "./ContreeClientDefs";
 

@@ -3,7 +3,16 @@ import { Component } from "react";
 import { Text, TouchableOpacity, View, ActivityIndicator, StyleSheet } from "react-native";
 
 import { Status } from "../ContreeClientDefs";
-import { panelBackgroundColor, regularMargin, panelBorderRadius, buttonColor, buttonColorText, borderColor, handBackroundColor, cardTextColor } from "./commonStyles";
+import {
+	panelBackgroundColor,
+	regularMargin,
+	panelBorderRadius,
+	buttonColor,
+	buttonColorText,
+	borderColor,
+	handBackroundColor,
+	cardTextColor,
+} from "../styles/commonStyles";
 
 interface PlayerControllerProps {
 	connectButton: ConnectButtonProps;
