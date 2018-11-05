@@ -3,12 +3,21 @@ import { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import SocketIo from "socket.io-client";
 
+import {
+	panelBackgroundColor,
+	secondaryTextColor,
+	regularMargin,
+	borderColor,
+	panelBorderRadius,
+	mainBackroundColor,
+} from "./components/commonStyles";
+
 import { Status } from "./ContreeClientDefs";
 
 import { OtherPlayers } from "./components/OtherPlayers";
 import { Table } from "./components/Table";
 import { PlayerController } from "./components/PlayerController";
-import { panelBackgroundColor, secondaryTextColor, regularMargin, borderColor, panelBorderRadius, mainBackroundColor } from "./components/commonStyles";
+import { BetController } from "./components/BetController";
 
 interface ContreeClientProps {
 }
@@ -66,11 +75,14 @@ export class ContreeClient extends Component<ContreeClientProps, ContreeClientSt
 		const { status, currentState, playerGameState } = this.state;
 		return (
 			<View style={styles.container}>
-				<View style={styles.topContainer} >
-					<View style={styles.stateContainer} >
+				<View style={styles.topContainer}>
+					<View style={styles.stateContainer}>
 						<Text style={styles.state}>{currentState}</Text>
 					</View>
-					<OtherPlayers />
+					<View style={styles.topRowContainer}>
+						<OtherPlayers />
+						<BetController />
+					</View>
 				</View>
 				<Table />
 				<PlayerController
@@ -98,6 +110,14 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		backgroundColor: panelBackgroundColor,
 		borderRadius: panelBorderRadius,
+	},
+	topRowContainer: {
+		flex: 1,
+		flexDirection: "row",
+		justifyContent: "space-between",
+
+		borderWidth: 1,
+		borderColor: "blue",
 	},
 	stateContainer: {
 		alignSelf: "stretch",

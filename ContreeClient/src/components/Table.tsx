@@ -1,6 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
+
 import { regularMargin, panelBorderRadius, cardTextColor, tableColor } from "./commonStyles";
 
 interface TableProps { }
