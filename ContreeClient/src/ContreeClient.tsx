@@ -116,8 +116,8 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		justifyContent: "space-between",
 
-		borderWidth: 1,
-		borderColor: "blue",
+		// borderWidth: 1,
+		// borderColor: "blue",
 	},
 	stateContainer: {
 		alignSelf: "stretch",
